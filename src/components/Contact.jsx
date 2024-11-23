@@ -14,16 +14,16 @@ const Contact = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div className="container mx-auto px-4">
-          <div className="flex flex-col mt-12 ml-96 md:flex-row items-center md:items-start justify-between gap-8">
+          <div className="flex flex-col-reverse md:flex-row mt-12 items-center md:items-start justify-between gap-8">
             {/* Logo Section */}
-            <motion.div 
-              className="w-full md:w-1/3"
+            <motion.div
+              className="w-full md:w-1/3 flex justify-center"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <motion.div
-                className="relative w-48 h-48 mx-auto"
+                className="relative w-32 h-32 md:w-48 md:h-48 mx-auto"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
@@ -39,16 +39,16 @@ const Contact = () => {
             </motion.div>
 
             {/* Contact Information Section */}
-            <div className="w-full md:w-2/3">
+            <div className="w-full md:w-2/3 text-center md:text-left">
               <motion.h2
-                className="mb-10 text-4xl"
+                className="mb-6 text-3xl md:text-4xl font-bold"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 Get in Touch
               </motion.h2>
-              
+
               <motion.div
                 className="tracking-tighter"
                 initial="hidden"
@@ -63,30 +63,30 @@ const Contact = () => {
                   },
                 }}
               >
-                <motion.p 
-                  className="my-4" 
-                  variants={{ 
-                    hidden: { y: 20, opacity: 0 }, 
-                    visible: { y: 0, opacity: 1 } 
+                <motion.p
+                  className="my-4 text-sm md:text-base"
+                  variants={{
+                    hidden: { y: 20, opacity: 0 },
+                    visible: { y: 0, opacity: 1 },
                   }}
                 >
                   {CONTACT.address}
                 </motion.p>
-                <motion.p 
-                  className="my-4" 
-                  variants={{ 
-                    hidden: { y: 20, opacity: 0 }, 
-                    visible: { y: 0, opacity: 1 } 
+                <motion.p
+                  className="my-4 text-sm md:text-base"
+                  variants={{
+                    hidden: { y: 20, opacity: 0 },
+                    visible: { y: 0, opacity: 1 },
                   }}
                 >
                   {CONTACT.phoneNo}
                 </motion.p>
                 <motion.a
                   href="#"
-                  className="border-b inline-block"
-                  variants={{ 
-                    hidden: { y: 20, opacity: 0 }, 
-                    visible: { y: 0, opacity: 1 } 
+                  className="border-b inline-block text-sm md:text-base text-blue-600 hover:text-blue-800"
+                  variants={{
+                    hidden: { y: 20, opacity: 0 },
+                    visible: { y: 0, opacity: 1 },
                   }}
                 >
                   {CONTACT.email}
